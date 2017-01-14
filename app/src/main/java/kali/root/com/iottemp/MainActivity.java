@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //temp of each room
         for(int i=1;i<=1;i++) {
             if (temp < 16)
                 extremecold++;
