@@ -17,8 +17,9 @@ public class MainActivity extends AppCompatActivity {
     int extremecold =0;
     int extremehot =0;
     int cold=0;
+    int hot =0;
     int moderate=0;
-    int hot=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
             if (temp >= 20 && temp < 22)
                 moderate++;
 
-            if (temp >= 20 && temp < 22)
+            if (temp >= 22 && temp < 26)
                 hot++;
 
-            if (temp >= 20 && temp < 22)
+            if (temp >= 26)
                 extremehot++;
         }
         barChart = (BarChart) findViewById(R.id.bargraph);
@@ -49,14 +50,13 @@ public class MainActivity extends AppCompatActivity {
         barEntries.add(new BarEntry(hot,3));
         barEntries.add(new BarEntry(extremehot,4));
         BarDataSet barDataSet = new BarDataSet(barEntries,"No. of systems");
-       // barDataSet.setColors(new int[] { R.color.green1, R.color.green2, R.color.green3, R.color.green4 ,Context);
+        barDataSet.setColors(new int[]{R.color.colorPrimaryDark, R.color.blue, R.color.mod,R.color.orange, R.color.red});
 
         ArrayList<String> categories = new ArrayList<>();
         categories.add("<16");
         categories.add("16-20");
         categories.add("20-22");
-        categories.add("22-24");
-        categories.add("24-26");
+        categories.add("22-26");
         categories.add(">26");
 
 
