@@ -1,13 +1,12 @@
 package kali.root.com.iottemp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
@@ -44,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
         }
         barChart = (BarChart) findViewById(R.id.bargraph);
         ArrayList<BarEntry> barEntries = new ArrayList<>();
-        barEntries.add(new BarEntry(50,0));
-        barEntries.add(new BarEntry(60,1));
-        barEntries.add(new BarEntry(40,2));
-        barEntries.add(new BarEntry(50,3));
-        barEntries.add(new BarEntry(30,4));
+        barEntries.add(new BarEntry(extremecold,0));
+        barEntries.add(new BarEntry(cold,1));
+        barEntries.add(new BarEntry(moderate,2));
+        barEntries.add(new BarEntry(hot,3));
+        barEntries.add(new BarEntry(extremehot,4));
         BarDataSet barDataSet = new BarDataSet(barEntries,"No. of systems");
-        barDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+       // barDataSet.setColors(new int[] { R.color.green1, R.color.green2, R.color.green3, R.color.green4 ,Context);
 
         ArrayList<String> categories = new ArrayList<>();
         categories.add("<16");
