@@ -1,5 +1,13 @@
 apply plugin: 'com.android.application'
 
+repositories {
+    mavenLocal()
+    flatDir {
+        dirs 'libs'
+    }
+    maven { url "https://jitpack.io" }
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
@@ -22,5 +30,6 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
     compile 'com.android.support:appcompat-v7:24.2.0'
 }
