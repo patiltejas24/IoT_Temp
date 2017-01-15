@@ -47,8 +47,7 @@ public class MainActivity extends AppCompatActivity {
         barEntries.add(new BarEntry(extremecold,0));
         barEntries.add(new BarEntry(cold,1));
         barEntries.add(new BarEntry(moderate,2));
-        barEntries.add(new BarEntry(hot,3));
-        barEntries.add(new BarEntry(extremehot,4));
+        barEntries.add(new BarEntry(extremehot,3));
         BarDataSet barDataSet = new BarDataSet(barEntries,"No. of systems");
         barDataSet.setColors(new int[]{R.color.colorPrimaryDark, R.color.blue, R.color.mod,R.color.orange, R.color.red});
 
